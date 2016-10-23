@@ -1,2 +1,145 @@
-.mLeft {
-  margin-left: 20px; }
+body {
+  background-color: #fff;
+  overflow: hidden; }
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  transform: translate(-50%, calc(-50%,+ 80px)); }
+  .circle > .text {
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%); }
+    .circle > .text > .beta {
+      color: #cccccc;
+      text-transform: uppercase;
+      font-size: 20px;
+      letter-spacing: 1px; }
+    .circle > .text > .number {
+      font-size: 5vmax;
+      color: #08C595;
+      font-family: arial,sans-serif; }
+    .circle > .text > h3 {
+      color: #00c68d;
+      font-size: 2vmax; }
+    .circle > .text > .time {
+      margin-top: 8px;
+      color: #aaa;
+      font-size: 14px; }
+  .circle:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    transform: rotate(247.5deg);
+    background: conic-gradient(hsl(4,100%,60%) 0 5deg, hsl(5.5,100%,60%) 0 10deg, hsl(7,100%,60%) 0 15deg, hsl(8.5,100%,60%) 0 20deg, hsl(10,100%,60%) 0 25deg, hsl(11.5,100%,60%) 0 30deg, hsl(13,100%,60%) 0 35deg, hsl(14.5,100%,60%) 0 40deg, hsl(16,100%,60%) 0 45deg, hsl(17.5,100%,60%) 0 50deg, hsl(19,100%,60%) 0 55deg, hsl(20.5,100%,60%) 0 60deg, hsl(22,100%,60%) 0 65deg, hsl(23.5,100%,60%) 0 70deg, hsl(25,100%,60%) 0 75deg, hsl(26.5,100%,60%) 0 80deg, hsl(28,100%,60%) 0 85deg, hsl(29.5,100%,60%) 0 90deg, hsl(106.5,73.5%,50%) 0 90deg, hsl(108,73%,50%) 0 95deg, hsl(109.5,72.5%,50%) 0 100deg, hsl(111,72%,50%) 0 105deg, hsl(112.5,71.5%,50%) 0 110deg, hsl(114,71%,50%) 0 115deg, hsl(115.5,70.5%,50%) 0 120deg, hsl(117,70%,50%) 0 125deg, hsl(118.5,69.5%,50%) 0 130deg, hsl(120,69%,50%) 0 135deg, hsl(121.5,68.5%,50%) 0 140deg, hsl(123,68%,50%) 0 145deg, hsl(124.5,67.5%,50%) 0 150deg, hsl(126,67%,50%) 0 155deg, hsl(127.5,66.5%,50%) 0 160deg, hsl(129,66%,50%) 0 165deg, hsl(130.5,65.5%,50%) 0 170deg, hsl(132,65%,50%) 0 175deg, hsl(133.5,64.5%,50%) 0 180deg, hsl(135,64%,50%) 0 185deg, hsl(136.5,63.5%,50%) 0 190deg, hsl(138,63%,50%) 0 195deg, hsl(139.5,62.5%,50%) 0 200deg, hsl(141,62%,50%) 0 205deg, hsl(142.5,61.5%,50%) 0 210deg, hsl(144,61%,50%) 0 215deg, hsl(145.5,60.5%,50%) 0 220deg, hsl(147,60%,50%) 0 225deg, transparent 0 360deg); }
+  .circle:after {
+    content: '';
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: 25px;
+    bottom: 25px;
+    margin: auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #fff; }
+  .circle > .circle-line {
+    position: absolute;
+    z-index: 10;
+    left: 50px;
+    right: 50px;
+    top: 50px;
+    bottom: 50px;
+    margin: auto;
+    border-radius: 50%;
+    border: 4px solid #6addbc;
+    -webkit-clip-path: polygon(100% 0, 100% 67%, 50% 40%, 0 67%, 0 0); }
+    .circle > .circle-line:before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      top: 4px;
+      bottom: 4px;
+      margin: auto;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background-color: #fff; }
+    .circle > .circle-line:after {
+      content: '';
+      position: absolute;
+      left: 45px;
+      right: 45px;
+      top: 45px;
+      bottom: 45px;
+      margin: auto;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      border: 1px dashed #999; }
+
+.tips {
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  width: 10px;
+  height: 50%;
+  transform-origin: 50% 100%;
+  -webkit-transform: rotate(-105deg);
+  -moz-transform: rotate(-105deg);
+  -ms-transform: rotate(-105deg);
+  -o-transform: rotate(-105deg);
+  transform: rotate(-105deg); }
+  .tips:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    height: 15px;
+    width: 15px;
+    background-color: #00c991;
+    -webkit-border-radius: 50% 50% 0;
+    -moz-border-radius: 50% 50% 0;
+    border-radius: 50% 50% 0;
+    transform: translate(-50%, -50%) rotate(45deg); }
+  .tips:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    z-index: 9;
+    left: 0px;
+    top: -5px;
+    border: 2px solid #fff;
+    border-radius: 50%; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate3D(0, 0, 1, -105deg); }
+  to {
+    transform: rotate3D(0, 0, 1, 96.6deg); } }
+
+.tips {
+  -webkit-animation: rotate 2s both ease-in;
+  -o-animation: rotate 2s both ease-in;
+  animation: rotate 2s both ease-in; }
+
+.animated .tips {
+  animation: none; }

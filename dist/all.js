@@ -1,6 +1,20 @@
 /**
  * Created by summer on 16/10/21.
  */
-var a='I am just for a gulp test,the first time;';
+window.onload = function(){
+    var circle= document.querySelector('.circle');
+    var box = document.querySelector('.tips');
+    box.classList.add('rotate');
+    var el= document.querySelector('#number');
+    var numAnim =new CountUp(el, 960, 0, 2.6);
+    numAnim.start();
 
-console.log(a);
+    document.addEventListener('click',function(e){
+        circle.classList.toggle('animated');
+        if(circle.classList.toString() === 'circle animated'){
+            numAnim.reset();
+        } else {
+            numAnim.start();
+        }
+    },false);
+};
