@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>CSS conic-gradient() polyfill</title>
+<link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+<h1>CSS conic-gradient() polyfill</h1>
+<p><a href="http://w3.org/TR/css4-images/#conic-gradients">Conic gradients</a> are awesome, but browsers haven’t realized yet. This polyfill lets you experiment with them now. If you like them, <a href="#ask">ask browser vendors to implement them</a>!</p>
+</header>
+
+<section id="examples">
+    <h1>Editable Examples</h1>
+          <article id="basic" style="/* Basic example */
+background: conic-gradient(#f06, gold);"></article>
+     <article style="/* Conical gradient cone */
+background: conic-gradient(#eee .1turn, black, #eee 326deg);"></article>
+   <article style="/* Hue wheel */
+background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+border-radius: 50%"></article>
+    <article style="/* Pie chart */
+background: conic-gradient(yellowgreen 40%, gold 0 70%, #f06 0);
+border-radius: 50%"></article>
+    <article style="/* Checkerboard */
+background: conic-gradient(black 25%, white 0 50%, black 0 75%, white 0);
+background-size: 4em 4em;"></article>
+    <article style="/* Alpha and multiple backgrounds */
+background: 
+    conic-gradient(#f06, rgba(0,0,0,.5)),
+    conic-gradient(silver 25%, #eee 0 50%,
+                   silver 0 75%, #eee 0);
+background-size: auto, 1em 1em;"></article> 
+        <article style="/* Starburst with repeating gradients */
+background: #0ac
+repeating-conic-gradient(hsla(0,0%,100%,.2) 0 15deg, hsla(0,0%,100%,0) 0 30deg);"></article>
+</section>
+
+<section id="community">
+    <h1>Community examples</h1>
+
+    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">The emulate 3D with conic-gradient demo again, now with an image (+working in WebKit browsers) <a href="http://t.co/ZzAqwKLdaT">http://t.co/ZzAqwKLdaT</a> <a href="http://t.co/jdAEgGDnuI">pic.twitter.com/jdAEgGDnuI</a></p>&mdash; Ana Tudor (@anatudor) <a href="https://twitter.com/anatudor/status/632597393985413121">August 15, 2015</a></blockquote>
+
+    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Another demo using `conic-gradient` for bouncing cube&#39;s faces (I hate animation) <a href="http://t.co/YXwJGaGQaM">http://t.co/YXwJGaGQaM</a> cc <a href="https://twitter.com/LeaVerou">@LeaVerou</a> <a href="http://t.co/BEnimSXeMN">pic.twitter.com/BEnimSXeMN</a></p>&mdash; Ana Tudor (@anatudor) <a href="https://twitter.com/anatudor/status/632609444258562048">August 15, 2015</a></blockquote>
+    
+    <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr">And an actually practical one: a metallic looking button! <a href="http://t.co/0SLAHN8gKL">http://t.co/0SLAHN8gKL</a> <a href="https://twitter.com/LeaVerou">@LeaVerou</a> <a href="http://t.co/lmv98tp2nK">pic.twitter.com/lmv98tp2nK</a></p>&mdash; Ana Tudor (@anatudor) <a href="https://twitter.com/anatudor/status/611732004531478528">June 19, 2015</a></blockquote>
+
+    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Cog animation using <a href="https://twitter.com/hashtag/conicGradient?src=hash">#conicGradient</a> (css polyfill made by <a href="https://twitter.com/LeaVerou">@LeaVerou</a>) <a href="http://t.co/wH95eZTO2s">http://t.co/wH95eZTO2s</a> (now with screenshot) <a href="http://t.co/d7Bif13Hwo">pic.twitter.com/d7Bif13Hwo</a></p>&mdash; Ryan (@ryanantonydunn) <a href="https://twitter.com/ryanantonydunn/status/613263784476569601">June 23, 2015</a></blockquote>
+
+    <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr">New idea: combined with `clip-path` (WebKit-only) <a href="http://t.co/Roz0fOrMEF">http://t.co/Roz0fOrMEF</a> <a href="https://twitter.com/LeaVerou">@LeaVerou</a> <a href="http://t.co/vGe3phS6nR">pic.twitter.com/vGe3phS6nR</a></p>&mdash; Ana Tudor (@anatudor) <a href="https://twitter.com/anatudor/status/611743862541959168">June 19, 2015</a></blockquote>
+
+    <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr">A few more examples using the conic-gradient() polyfill <a href="http://t.co/x0sfVmzqPX">http://t.co/x0sfVmzqPX</a> (each one is one element ☺) <a href="https://twitter.com/LeaVerou">@LeaVerou</a> <a href="http://t.co/60MDWDDE6Z">pic.twitter.com/60MDWDDE6Z</a></p>&mdash; Ana Tudor (@anatudor) <a href="https://twitter.com/anatudor/status/611712170062139392">June 19, 2015</a></blockquote>
+
+    <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/LeaVerou">@LeaVerou</a> Radar! <a href="http://t.co/FIfXFBTp4k">http://t.co/FIfXFBTp4k</a> 1 element, created now using the 3 types of gradients: linear, radial, conic☺ <a href="http://t.co/Y4KWGpG2fr">pic.twitter.com/Y4KWGpG2fr</a></p>&mdash; Ana Tudor (@anatudor) <a href="https://twitter.com/anatudor/status/611659012212441088">June 18, 2015</a></blockquote>
+
+    <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr">And one more with `clip-path` (WebKit only) <a href="http://t.co/D0cdRncK7C">http://t.co/D0cdRncK7C</a> - one element per shape <a href="https://twitter.com/LeaVerou">@LeaVerou</a> <a href="http://t.co/OpXiIyUDXX">pic.twitter.com/OpXiIyUDXX</a></p>&mdash; Ana Tudor (@anatudor) <a href="https://twitter.com/anatudor/status/611762360580239360">June 19, 2015</a></blockquote>
+
+    <blockquote class="twitter-tweet" lang="zh-tw"><p lang="en" dir="ltr">I just made a rotating snake [<a href="https://twitter.com/hashtag/illusion?src=hash">#illusion</a>] with <a href="https://twitter.com/hashtag/conicGradient?src=hash">#conicGradient</a> (css polyfill made by <a href="https://twitter.com/LeaVerou">@LeaVerou</a> ) <a href="http://t.co/9ouDRkLq3s">http://t.co/9ouDRkLq3s</a> <a href="http://t.co/IdV4h2MO4i">pic.twitter.com/IdV4h2MO4i</a></p>&mdash; R+ (@RplusTW) <a href="https://twitter.com/RplusTW/status/612761966910685185">2015 6月 21日</a></blockquote>
+
+    <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/LeaVerou">@LeaVerou</a> Took it a bit further with some blend modes <a href="http://t.co/XEolonnTVt">http://t.co/XEolonnTVt</a> Wish we could animate... <a href="http://t.co/EEAZ7cw2qV">pic.twitter.com/EEAZ7cw2qV</a></p>&mdash; Ryan (@ryanantonydunn) <a href="https://twitter.com/ryanantonydunn/status/613297655310102528">June 23, 2015</a></blockquote>
+
+    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Playing around with <a href="https://twitter.com/LeaVerou">@LeaVerou</a> &#39;s conic-gradient polyfill <a href="http://t.co/HXEAo1PZeP">http://t.co/HXEAo1PZeP</a> <a href="http://t.co/NzNOq8lu3T">pic.twitter.com/NzNOq8lu3T</a></p>&mdash; Lucas Bebber (@lucasbebber) <a href="https://twitter.com/lucasbebber/status/613447315597197312">June 23, 2015</a></blockquote>
+
+    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Thanks <a href="https://twitter.com/LeaVerou">@LeaVerou</a> for the <a href="https://twitter.com/hashtag/conicGradient?src=hash">#conicGradient</a> css polyfill! Makes creating a Color Wheel a snap <a href="http://t.co/uLxteQmQgh">http://t.co/uLxteQmQgh</a> <a href="http://t.co/V2YTCRe7rO">pic.twitter.com/V2YTCRe7rO</a></p>&mdash; Michael (@mge_de) <a href="https://twitter.com/mge_de/status/614005408131321856">June 25, 2015</a></blockquote>
+
+    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Quick <a href="https://twitter.com/CodePen">@CodePen</a> demo: rays <a href="http://t.co/bEoBY5v3hk">http://t.co/bEoBY5v3hk</a> (using `conic-gradient()`) <a href="https://twitter.com/LeaVerou">@LeaVerou</a> <a href="http://t.co/JZYVwubNcN">pic.twitter.com/JZYVwubNcN</a></p>&mdash; Ana Tudor (@anatudor) <a href="https://twitter.com/anatudor/status/637540907663904768">August 29, 2015</a></blockquote>
+
+    <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Inspired from Basic Indian Sarees. Made using conic-gradient polyfill by <a href="https://twitter.com/LeaVerou">@LeaVerou</a>. <a href="https://t.co/HCYcprWA2W">https://t.co/HCYcprWA2W</a> <a href="https://t.co/Eb1w8pJbPF">pic.twitter.com/Eb1w8pJbPF</a></p>&mdash; Praveen Puglia (@praveenpuglia) <a href="https://twitter.com/praveenpuglia/status/657124672492863488">October 22, 2015</a></blockquote>
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <footer>Made a cool demo too? Tweet it (with a picture) to <a href="http://twitter.com/leaverou">@leaverou</a> and it might be added here!</footer>
+</section>
+
+<section id="features">
+    <h1>Features</h1>
+
+    <ul>
+        <li>Color stop normalization</li>
+        <li>Both <code>conic-gradient()</code> and <code>repeating-conic-gradient()</code> support</li>
+        <li>Follows background-size (pixels and percentages). By default occupies the entire element, just like a proper CSS gradient.</li>
+        <li>Supports double position syntax (two positions for the same color stop, as a shortcut for two consecutive color stops with the same color)</li>
+    </ul>
+</section>
+
+<section id="limitations">
+    <h1>Limitations</h1>
+
+    <ul>
+        <li>No center point support</li>
+        <li>No calc() support</li>
+        <li>No midpoint color stops (color stops with no color)</li>
+        <li>Negative color stop positions not supported</li>
+        <li>Color interpolation happens without premultiplied alpha.</li>
+    </ul>
+</section>
+
+<section id="usage">
+    <h1>Usage</h1>
+
+    <p>To use directly in your CSS code like you would if it was supported, it requires <a href="http://leaverou.github.io/prefixfree">-prefix-free</a>. Just include both scripts in order:</p>
+    <pre><code class="language-markup">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">&lt;/script>
+&lt;script src="<a href="conic-gradient.js">conic-gradient.js</a>">&lt;/script></code></pre>
+
+    <p>Alternatively, you can use the API to directly get the SVG element generated and do whatever you want with it:</p>
+    <pre><code class="language-javascript">var gradient = new ConicGradient({
+    stops: "gold 40%, #f06 0", // required
+    repeating: true, // Default: false
+    size: 400 // Default: Math.max(innerWidth, innerHeight)
+});
+
+console.log(gradient.svg); // SVG markup
+console.log(gradient.png); // PNG image (fixed dimensions) as a data URL
+console.log(gradient.dataURL); // data URL
+console.log(gradient.blobURL); // blog URL</code></pre>
+
+    <p>Note that the generated image will always resize accordingly, you don’t have to provide a size. The size argument just controls the resolution of the bitmap image generated inside the SVG that will be scaled. Making it smaller will result in faster performance but less crisp gradients.</p>
+
+    <p>Also, you can use <a href="https://github.com/jonathantneal/postcss-conic-gradient">PostCSS Conic Gradient</a> to have conic gradient fallbacks added automatically to your CSS file.</p>
+</section>
+
+<section id="ask">
+    <h1>How can I get conic gradients implemented?</h1>
+
+    <p>The best way to get a feature implemented is asking browser vendors to do it. It’s really that simple. Browser vendors prioritize what to implement based on developer requests, so the more developers asking for a feature, the higher the chances browsers will notice.</p>
+    
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Conic gradients are awesome. Please implement them @MSEdgeDev @mozhacks @ChromiumDev @odevrel @webkit" data-via="LeaVerou">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Conic gradients are awesome. Please implement them @MSEdgeDev @mozhacks @ChromiumDev @odevrel @webkit" data-via="LeaVerou">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    
+    <p>Also, communicate directly with the developers. Vote or comment in the following:</p>
+
+    <ul>
+        <li><a href="https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer/suggestions/8471413-implement-conic-gradients-from-css-image-values-le">Microsoft Edge Uservoice thread</a></li>
+        <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1175958">Gecko bug report</a></li>
+        <li><a href="https://code.google.com/p/chromium/issues/detail?id=502970">Chromium bug report</a></li>
+        <li><a href="https://bugs.webkit.org/show_bug.cgi?id=146113">WebKit bug report</a></li>
+    </ul>
+
+    <p>But mainly, and regardless of the venue, speak up. <a href="http://lea.verou.me/2015/06/conical-gradients-today/">Make noise.</a> It matters more than you think.</p>
+</section>
+<a href="https://github.com/leaverou/conic-gradient"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+<footer>
+    Made with &hearts; by <a href="http://lea.verou.me">Lea Verou</a> &bull; <a href="http://lea.verou.me/2015/06/conical-gradients-today">Blog post</a>
+</footer>
+
+<script src="../prefixfree/prefixfree.min.js"></script>
+<script src="../incrementable/incrementable.js"></script>
+<script src="conic-gradient.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

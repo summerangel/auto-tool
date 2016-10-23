@@ -4,12 +4,12 @@ body {
 
 .circle {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   width: 400px;
   height: 400px;
   text-align: center;
-  transform: translate(-50%, calc(-50%,+ 80px)); }
+  transform: translate(-50%, calc(-50% + 80px)); }
   .circle > .text {
     position: absolute;
     z-index: 100;

@@ -1,0 +1,116 @@
+body {
+    margin: 0 auto;
+    max-width: 60em;
+    padding: 2em;
+    background-color: #fff;
+    background: white;
+    font: 100%/1.5 Palatino Linotype, Palatino, serif;
+}
+
+h1 {
+	font: bold 200% Helvetica Neue, sans-serif;
+	color: #aaa;
+	letter-spacing: -.03em;
+}
+
+header > h1 {
+	text-align: center;
+	font-size: 180%;
+	color: #f06;
+}
+
+header {
+
+	font-size: 200%;
+}
+
+a {
+	color: #0ac;
+	font-weight: bold;
+}
+
+a:not(:hover) {
+	text-decoration: none;
+}
+
+ul, ol {
+	padding-left: 0;
+}
+
+textarea {
+	font: inherit;
+	font-family: Consolas, Monaco, monospace;
+}
+
+#examples {}
+
+	#examples article {
+		display: flex;
+		margin: 2em 0;
+		resize: vertical;
+	}
+
+	#examples article:target {
+		background: white;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		box-sizing: border-box;
+		flex-direction: column;
+		font-size: 200%;
+	}
+
+	#examples textarea {
+		flex: 1;
+		padding: .5em .8em;
+		border: 0;
+		margin-left: .5em;
+		background: hsl(200, 20%, 25%) linear-gradient(rgba(0,0,0,.1) 50%, transparent 0);
+		background-origin: content-box;
+		background-size: auto 3em;
+		background-attachment: local;
+		color: white;
+		font-size: 120%;
+		line-height: 1.5;
+	}
+
+		#examples article:target textarea {
+			margin: 1em 0 0;
+		}
+
+	#examples div {
+	    width: 300px;
+	    height: 300px;
+	    display: inline-block;
+	    background-size: 100% 100%;
+	    background-position: center;
+	}
+
+		#examples article:target div {
+			margin: auto;
+			width: 50vmin;
+			height: 50vmin;
+			margin-top: 1em;
+		}
+
+footer {
+	text-align: center;
+}
+
+#community {
+	column-count: 2;
+}
+
+	#community > :not(.twitter-tweet) {
+		column-span: all;
+	}
+
+	#community .twitter-tweet {
+		margin: 0 0 1em !important;
+		-webkit-column-break-inside: avoid;
+		break-inside: avoid;
+	}
